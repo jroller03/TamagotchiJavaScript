@@ -30,8 +30,27 @@ describe('Tamagotchi', function() {
 
   it('should be 2 years old after 2 minutes', function() {
     pet.age = 0;
-    jasmine.clock().tick(2000);
+    jasmine.clock().tick(4*60*1000);
     console.log(pet.age);
     expect(pet.age).toEqual(2);
+  });
+
+  it('should be a teen by now', function() {
+    pet.age = 0;
+    jasmine.clock().tick(20*60*1000);
+    console.log(pet.age);
+    expect(pet.getStages()).toEqual("Teen");
+  });
+
+  it('should have a happy meter value of 50' ,function() {
+    pet.happyMeter = 100;
+    jasmine.clock().tick(50*60*1000);
+    expect(pet.happyMeter).toEqual(50);
+  });
+
+  it('should have a displine value of ' , function() {
+    pet.disciplineMeter = 21;
+    pet.scoldPet();
+    expect(pet.getDesciplineMeter()).toEqual(22);
   });
 });

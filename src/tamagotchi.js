@@ -2,9 +2,9 @@ export class Tamagotchi {
   constructor(name,type) {
     this.name = name;
     this.type = type; // type of animal
-    this.hungryMeter = 50;
+    this.hungryMeter = 500;
     this.happyMeter = 100;
-    this.disciplineMeter = 10;
+    this.disciplineMeter = 100;
     this.age = 0;
     this.time = new Date();
   }
@@ -18,18 +18,26 @@ export class Tamagotchi {
   setHappy() {
     setInterval(() => {
       this.happyMeter--;
-    },(60 - this.time.getSeconds() ) * 1000);
+    },60*1000);
   }
 
   setDiscipline() {
     setInterval(() => {
       this.disciplineMeter--;
-    },5000);
+    }, 60 * 60 * 1000);
   }
 
   setAge() {
     setInterval(() => {
       this.age++; // increment
+    }, 2*60*1000);
+  }
+
+  setSleep() {
+    setInterval(() => {
+    this.happyMeter += 1; 
+      this.hungryMeter -= 5;
+      this.disciplineMeter += 5;
     }, 1000);
   }
 
@@ -54,7 +62,18 @@ export class Tamagotchi {
   }
 
   scoldPet() {
-    this.disciplineMeter;
+    this.disciplineMeter++;
+  }
+  getDesciplineMeter() {
+    return this.disciplineMeter;
+  }
+
+  getHappyMeter() {
+    return this.happyMeter;
+  }
+
+  getHungryMeter() {
+    return this.hungryMeter;
   }
 
   getStages() {

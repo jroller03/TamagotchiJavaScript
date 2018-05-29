@@ -2,9 +2,77 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="icon" href="https://cdn2.iconfinder.com/data/icons/old-stuff/100/old-08-512.png">
+    <title>My Tamagotchi</title>
   </head>
   <body>
+        <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">Tamagotchi</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample02">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+
+        </ul>
+        <form class="form-inline my-2 my-md-0" action="/search" method="post" name="search">
+          <input class="form-control" type="text" placeholder="Search" name="searchdate" >
+        </form>
+      </div>
+    </nav>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-9">
+          <div class="form-group" >
+            <div class="main">
+              <img src="https://fashionista.com/.image/t_share/MTIwODA5OTk0Mzc0NTQyMzY2/image-title2.gif" alt="motion.gif" id="motion">
+            </div>
+            <div class="sleep">
+              <img src="https://farm3.staticflickr.com/2933/13998834422_1c78e14ed0_o.gif" alt="sleep" id="sleeping">
+            </div>
+            <div class="feed">
+              <img src="https://orig00.deviantart.net/de58/f/2016/058/8/5/sans_magotchi_by_fel_fisk-d9tds5g.gif" id="feeding">
+            </div>
+            <div class="scold">
+              <img src="https://mtv.mtvnimages.com/uri/mgid:file:http:shared:mtv.com/news/wp-content/uploads/2015/04/Alien-1430404885.gif?quality=.8&height=173&width=260" alt="runaway" id ="scolding">
+            </div>
+            <div class="play">
+              <img src="https://fashionista.com/.image/t_share/MTIwODEwMDE0NTA3MDcwNDk0/image-title4.gif" alt="play" id="playing">
+            </div>
+          </div>
+        </div>
+        <div class="col-3" id="display">
+          <p><b><em>Pet Name: </em></b><span id="name"></span></p>
+          <p><b><em>Pet Type: </em></b><span id="type"></span></p>
+          <p><b><em>Happy Meter: </em></b><span id="happy"></span></p>
+          <p><b><em>Hungry Meter: </em></b><span id="hungry"></span></p>
+          <p><b><em>Discpline Meter: </em></b><span id="discipline"></span></p>
+        </div>
+        <div class="col-12">
+          <div class="btn btn-lg" role="group" aria-label="Basic example" id="buttons">
+            <button type="button" class="btn btn-secondary btn-danger" id="feed">Feed</button>
+            <button type="button" class="btn btn-secondary btn-warning" id="play">Play</button>
+            <button type="button" class="btn btn-secondary btn-info" id="scold">Scold</button>
+            <button type="button" class="btn btn-secondary btn-primary" id="sleep">Sleep</button>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
 
   </body>
+  <!-- Footer -->
+<footer class="footer">
+  <div class="container" id="foot">
+    <b><hr class="my-4"></b>
+    <p align="center">&#169; 2018 <a href="/" >Tamagotchi App</a>, by Rio and Justin .</p>
+  </div>
+</footer>
 </html>

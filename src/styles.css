@@ -1,0 +1,37 @@
+#motion {
+  border: 5px solid black;
+}
+#sleeping {
+  border: 5px solid black;
+}
+
+#display {
+  border : 5px solid black;
+  margin-left: 10px;
+}
+
+#feeding {
+  border: 5px solid black;
+}
+.sleep {
+  display: none;
+}
+#scolding {
+  border: 5px solid black;
+}
+
+.feed {
+  display: none;
+}
+
+.scold {
+  display: none;
+}
+
+.play {
+  display: none;
+}
+
+#playing {
+  border: 5px solid black;
+}
