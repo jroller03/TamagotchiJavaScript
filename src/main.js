@@ -12,11 +12,21 @@ $(document).ready(function() {
   pet.setDiscipline();
   pet.setAge();
   setInterval(() => {
-    $("#name").text(pet.name);
-    $("#type").text(pet.type);
-    $("#happy").text(pet.getHappyMeter());
-    $("#hungry").text(pet.getHungryMeter());
-    $("#discipline").text(pet.getDesciplineMeter());
+
+    if( !pet.isItDead() ) {
+      $("#name").text(pet.name);
+      $("#type").text(pet.type);
+      $("#happy").text(pet.getHappyMeter());
+      $("#hungry").text(pet.getHungryMeter());
+      $("#discipline").text(pet.getDesciplineMeter());
+    } else {
+      $(".main").hide();
+      $(".scold").hide();
+      $(".play").hide();
+      $(".feed").hide();
+      $(".sleep").hide();
+      $("dead").show();
+    }
   },1000);
 
   $("#sleep").on("click",function() {
@@ -25,6 +35,7 @@ $(document).ready(function() {
     $(".scold").hide();
     $(".play").hide();
     $(".feed").hide();
+    $("dead").hide();
     $(".sleep").show();
      pet.setSleep();
     setInterval(() => {
@@ -43,7 +54,8 @@ $(document).ready(function() {
     $(".main").hide();
     $(".scold").hide();
     $(".play").hide();
-    $("sleep").hide();
+    $(".sleep").hide();
+    $("dead").hide();
     $(".feed").show();
 
     pet.feedThem();
@@ -56,8 +68,10 @@ $(document).ready(function() {
 
   $("#scold").on("click",function() {
     $(".main").hide();
-    $(".sleep").hide();
+
     $(".play").hide();
+    $(".sleep").hide();
+    $("dead").hide();
     $(".feed").hide();
     $(".scold").show();
     pet.scoldPet();
@@ -71,6 +85,7 @@ $(document).ready(function() {
   $("#play").on("click",function() {
     $(".main").hide();
     $(".sleep").hide();
+    $("dead").hide();
     $(".feed").hide();
     $(".scold").hide();
     $(".play").show();

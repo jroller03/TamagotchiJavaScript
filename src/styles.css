@@ -35,3 +35,9 @@
 #playing {
   border: 5px solid black;
 }
+.dead {
+  display: none;
+}
+#dead {
+  border: 5px solid black;
+}
